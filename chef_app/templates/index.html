@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- home -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h3>fastest ever</h3>
+            <h1>Be the fastest <br />In Delivering <br />Your <span>Food</span></h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, quidem rerum. Temporibus, esse dolorem? Obcaecati mollitia voluptates nesciunt id. Eos autem, nihil cum temporibus voluptates nobis sed quis sunt. Animi.
+            </p>
+            <a href="#contact" class="btn">Contact Here</a>
+        </div>
+        <div class="home-img">
+            <img src="{% static 'Chef1.jpg' %}" alt="">
+        </div>
+    </section>
+    <!-- services -->
+    <section class="services" id="services">
+        <div class="heading">
+            <p>What We Serve</p>
+            <h2>Your Favorite Food<br> Delivery Partner</h2>
+        </div>
+
+        <div class="services-container">
+            <div class="box">
+                <img src="{% static 'Order.jpg' %}" alt="">
+                <h2>Easy to order</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, consectetur!</p>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'Fast delivery.jpg' %}" alt="">
+                <h2>Fast Delivery</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, consectetur!</p>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'Best quality.jpg' %}" alt="">
+                <h2>Best Quality</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, consectetur!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- chef section -->
+    <section class="chefs" id="chefs">
+        <div class="heading">
+            <p>Our Chefs</p>
+            <h2>Our Awesome Chefs</h2>
+        </div>
+        <div class="chefs-container">
+            {% for chef in chefs %}
+            <div class="chefs-box">
+                <img src="{{ chef.image.url }}" alt="{{ chef.name }}">
+                <div class="text">
+                    <h2>{{ chef.name }}</h2>
+                    <p>{{ chef.description }}.</p>
+                    <a href="#" class="btwn">Hire Now</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class='heading'>
+            <p>Have Any Question?</p>
+            <h2>Contact Us</h2>
+        </div>
+        <div class="contact-form">
+        </div>
+    </section>
+{% endblock %}

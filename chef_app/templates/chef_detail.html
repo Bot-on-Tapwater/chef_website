@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<section class="chefs" id="chefs"></section>
+    <h1>{{ chef.name }}</h1>
+    <img src="{% static chef.image %}" alt="">
+    <p>{{ chef.description }}</p>
+    <a href="{% url 'chef_update' chef.pk %}">Edit</a>
+    <a href="{% url 'chef_delete' chef.pk %}">Delete</a>
+</section>
+{% endblock %}

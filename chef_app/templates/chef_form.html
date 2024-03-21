@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+    <h1>Create or Update Chef</h1>
+    <div class="contact-form">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="contact-button" type="submit">Save</button>
+        </form>
+    </div>
+{% endblock %}

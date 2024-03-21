@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<!-- chef section -->
+<section class="chefs" id="chefs">
+    <div class="heading">
+        <p>Our Chefs</p>
+        <h2>Our Awesome Chefs</h2>
+    </div>
+    <div class="chefs-container">
+        {% for chef in chefs %}
+            <div class="chefs-box">
+                <img src="{{ chef.image.url }}" alt="{{ chef.name }}">
+                <div class="text">
+                    <h2>{{ chef.name }}</h2>
+                    <p>{{ chef.description }}</p>
+                    <a href="#" class="btwn">Hire Now</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <!-- {% for chef in chefs %}
+        <div class="chefs-box">
+            <img src="{{ chef.image.url }}" alt="{{ chef.name }}">
+            <div class="text">
+                <h2>{{ chef.name }}</h2>
+                <p>{{ chef.description }}</p>
+                <a href="{% url 'chef_detail' chef.pk %}" class="btwn">View Details</a>
+            </div>
+        </div>
+    {% endfor %} -->
+</section>
+{% endblock %}

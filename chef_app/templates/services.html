@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- services -->
+    <section class="services" id="services">
+        <div class="heading">
+            <p>What We Serve</p>
+            <h2>Your Favorite Food<br> Delivery Partner</h2>
+        </div>
+
+        <div class="services-container">
+            <div class="box">
+                <img src="{% static 'Order.jpg' %}" alt="" style="width: 200px; height: auto;">
+                <h2>Easy to order</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, consectetur!</p>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'Fast delivery.jpg' %}" alt="" style="width: 200px; height: auto;">
+                <h2>Fast Delivery</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, consectetur!</p>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'Best%20quality.jpg' %}" alt="" style="width: 200px; height: auto;">
+                <h2>Best Quality</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, consectetur!</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{#{% for service in services %}#}
+{#<div class="box">#}
+{#    <img src="{{ service.image.url }}" alt="{{ service.title }}">#}
+{#    <h2>{{ service.title }}</h2>#}
+{#    <p>{{ service.description }}</p>#}
+{#</div>#}
+{#{% endfor %}#}
